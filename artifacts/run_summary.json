@@ -1,0 +1,193 @@
+{
+  "scale": "dev",
+  "seed": 42,
+  "rows": {
+    "products": 16,
+    "skus": 24,
+    "stores": 8,
+    "warehouses": 4,
+    "suppliers": 7,
+    "daily_sales": 60867,
+    "inventory_snapshots": 20335,
+    "purchase_orders": 3809,
+    "lead_times": 24,
+    "promotions": 27,
+    "prices": 30,
+    "markdowns": 9,
+    "holidays": 33,
+    "weather": 1600,
+    "returns": 903,
+    "stock_outs": 381,
+    "replenishment_decisions": 14736
+  },
+  "forecast_metrics": {
+    "baseline_wmape": 0.1548,
+    "gbm_wmape": 0.1446,
+    "ets_wmape": 0.1254,
+    "baseline_accuracy_pct": 84.52,
+    "gbm_accuracy_pct": 85.54,
+    "ets_accuracy_pct": 87.46,
+    "relative_improvement_pct": 6.59
+  },
+  "reconciliation": [
+    {
+      "level": "Store-SKU",
+      "method": "Bottom-up (GBM)",
+      "wmape": 0.1446,
+      "mape": 0.1773,
+      "bias": 0.0394,
+      "accuracy_pct": 85.54,
+      "n_series": 152
+    },
+    {
+      "level": "SKU",
+      "method": "Bottom-up (GBM)",
+      "wmape": 0.093,
+      "mape": 0.1095,
+      "bias": 0.0394,
+      "accuracy_pct": 90.7,
+      "n_series": 24
+    },
+    {
+      "level": "Category",
+      "method": "Bottom-up (GBM)",
+      "wmape": 0.0709,
+      "mape": 0.0865,
+      "bias": 0.0394,
+      "accuracy_pct": 92.91,
+      "n_series": 6
+    },
+    {
+      "level": "Total",
+      "method": "Bottom-up (GBM)",
+      "wmape": 0.0499,
+      "mape": 0.0667,
+      "bias": 0.0394,
+      "accuracy_pct": 95.01,
+      "n_series": 1
+    },
+    {
+      "level": "SKU",
+      "method": "Top-down (ETS share)",
+      "wmape": 0.1268,
+      "mape": 0.1368,
+      "bias": -0.007,
+      "accuracy_pct": 87.32,
+      "n_series": 24
+    },
+    {
+      "level": "Category",
+      "method": "Top-down (ETS share)",
+      "wmape": 0.1045,
+      "mape": 0.1155,
+      "bias": -0.007,
+      "accuracy_pct": 89.55,
+      "n_series": 6
+    },
+    {
+      "level": "Total",
+      "method": "Top-down (ETS share)",
+      "wmape": 0.0694,
+      "mape": 0.0814,
+      "bias": -0.007,
+      "accuracy_pct": 93.06,
+      "n_series": 1
+    },
+    {
+      "level": "Store-SKU",
+      "method": "Baseline (4-week moving average)",
+      "wmape": 0.1548,
+      "mape": 0.1895,
+      "bias": 0.0587,
+      "accuracy_pct": 84.52,
+      "n_series": 152
+    },
+    {
+      "level": "SKU",
+      "method": "Baseline (4-week moving average)",
+      "wmape": 0.1033,
+      "mape": 0.1208,
+      "bias": 0.0587,
+      "accuracy_pct": 89.67,
+      "n_series": 24
+    },
+    {
+      "level": "Category",
+      "method": "Baseline (4-week moving average)",
+      "wmape": 0.0792,
+      "mape": 0.0941,
+      "bias": 0.0587,
+      "accuracy_pct": 92.08,
+      "n_series": 6
+    },
+    {
+      "level": "Total",
+      "method": "Baseline (4-week moving average)",
+      "wmape": 0.061,
+      "mape": 0.0787,
+      "bias": 0.0587,
+      "accuracy_pct": 93.9,
+      "n_series": 1
+    }
+  ],
+  "risk_model_metrics": {
+    "auc": 0.6003,
+    "n_train": 2856,
+    "n_test": 952,
+    "base_late_rate": 0.2287
+  },
+  "monitoring_summary": {
+    "latest_weekly_wmape": 0.4543,
+    "forecast_status": "Critical",
+    "max_feature_psi": 0.2915,
+    "drift_status": "Critical",
+    "data_quality_status": "Healthy",
+    "lead_time_risk_model_auc": 0.6003,
+    "open_inventory_anomalies": 415
+  },
+  "governance": {
+    "data_quality_pass_rate": 0.9883,
+    "data_quality_rules_failed": [
+      "DQ-006",
+      "DQ-007"
+    ],
+    "master_data_checks_failed": [
+      "purchase order references known sku_id"
+    ],
+    "override_summary": {
+      "total_decisions": 14736,
+      "override_count": 626,
+      "override_rate": 0.0425,
+      "auto_approved_rate": 0.9575,
+      "override_reasons": {
+        "Warehouse supply shortfall - partial fulfilment": 626
+      }
+    }
+  },
+  "business_kpis": {
+    "stockout_rate_baseline": 0.0063,
+    "stockout_rate_target": 0.005,
+    "excess_inventory_rate_baseline": 0.1575,
+    "excess_inventory_rate_target": 0.1339,
+    "inventory_turns_baseline": 93.53,
+    "inventory_turns_target": 98.21,
+    "forecast_wmape_baseline": 0.1548,
+    "forecast_wmape_advanced": 0.1446,
+    "forecast_accuracy_relative_improvement_pct": 6.59,
+    "manual_override_rate_baseline": 0.0425,
+    "data_quality_pass_rate": 0.9883,
+    "annualised_cogs_estimate_aud": 2044181.0,
+    "annual_lost_sales_estimate_aud": 14293.0,
+    "targets": {
+      "stockout_rate_reduction_low": 0.1,
+      "stockout_rate_reduction_high": 0.2,
+      "excess_inventory_reduction_low": 0.08,
+      "excess_inventory_reduction_high": 0.15,
+      "forecast_accuracy_improvement": 0.1,
+      "inventory_turns_improvement": 0.05,
+      "manual_effort_reduction": 0.2
+    }
+  },
+  "inventory_anomalies_detected": 415,
+  "promotion_events_evaluated": 27
+}

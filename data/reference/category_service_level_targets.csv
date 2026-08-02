@@ -1,0 +1,7 @@
+category,target_service_level,rationale
+Beverages,0.95,High velocity and weather-sensitive; stock-out risk is high impact
+Snacks,0.95,High velocity, promotion-driven demand
+Dairy,0.97,Short shelf life and daily replenishment cadence justify a higher service level
+Household,0.90,Long shelf life and long lead time tolerate a lower service level
+Personal Care,0.90,Long shelf life and long lead time tolerate a lower service level
+Frozen,0.95,Weather-sensitive and moderate shelf life

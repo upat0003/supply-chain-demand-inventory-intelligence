@@ -1,0 +1,6 @@
+check,domain,passed,detail
+product_id uniqueness,Product master,True,0 duplicates
+sku references known product_id,Product master,True,0 orphaned SKUs
+store references known warehouse_id,Location master,True,0 orphaned stores
+supplier_id uniqueness,Supplier master,True,no duplicates
+purchase order references known sku_id,Supplier master,False,1 purchase orders reference an unknown SKU

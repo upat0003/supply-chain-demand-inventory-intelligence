@@ -1,0 +1,5 @@
+model_name,version,status,trained_on,training_window_days,key_metric,key_metric_value,approved_by,approved_on
+baseline_moving_average,1.0.0,Retired champion,synthetic seed 42,400,wmape,0.1548,Demand Planning Lead,2024-01-15
+demand_gbm,1.0.0,Champion,synthetic seed 42,400,wmape,0.1446,Data Science Lead,2026-07-15
+demand_ets_holtwinters,1.0.0,Reference/challenger,synthetic seed 42,400,wmape,0.1254,Data Science Lead,2026-07-15
+lead_time_risk,1.0.0,Champion,synthetic seed 42,400,auc,0.6003,Supply Chain Manager,2026-07-15

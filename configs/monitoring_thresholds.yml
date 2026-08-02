@@ -1,0 +1,28 @@
+project:
+  seed: 42
+  scale: dev
+  service_level_z: 1.65
+  excess_inventory_days_of_supply_threshold: 6
+monitoring:
+  wmape_warning: 0.20
+  wmape_critical: 0.28
+  psi_warning: 0.10
+  psi_critical: 0.25
+  data_quality_pass_min: 0.98
+  late_delivery_rate_warning: 0.20
+  late_delivery_rate_critical: 0.30
+  inventory_anomaly_contamination: 0.02
+business_baseline:
+  # Frozen baseline values used for value measurement; recomputed at each
+  # pipeline run and written to artifacts/run_summary.json.business_kpis.
+  planner_hours_per_month: 120
+  loaded_planner_cost_per_hour_aud: 65
+  inventory_holding_cost_rate: 0.22
+business_targets:
+  stockout_rate_reduction_low: 0.10
+  stockout_rate_reduction_high: 0.20
+  excess_inventory_reduction_low: 0.08
+  excess_inventory_reduction_high: 0.15
+  forecast_accuracy_improvement: 0.10
+  inventory_turns_improvement: 0.05
+  manual_effort_reduction: 0.20

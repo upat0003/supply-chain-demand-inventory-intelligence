@@ -1,0 +1,8 @@
+supplier_id,supplier_name,primary_category,region_of_origin,reliability_score,onboarding_date
+SUP-01,Ausfresh Distribution,Dairy,VIC,0.807,2021-02-11
+SUP-02,Pacific Grocers Supply,Snacks,VIC,0.887,2018-11-20
+SUP-03,Bluewater Logistics,Frozen,WA,0.921,2018-01-01
+SUP-04,National Household Imports,Personal Care,NSW,0.757,2021-10-10
+SUP-05,Everclear Beverage Co,Beverages,Overseas,0.813,2022-11-17
+SUP-06,Southern Cold Chain,Dairy,Overseas,0.853,2018-01-07
+SUP-07,Metro Consumer Goods,Frozen,WA,0.797,2019-06-22

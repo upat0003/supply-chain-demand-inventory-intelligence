@@ -1,0 +1,12 @@
+id,table,field,expectation,threshold,severity,owner,description,pass_rate,rows_checked,rows_failed,passed,reference
+DQ-001,products,product_id,unique_and_not_null,1.0,critical,Product Data Steward,"Every product master record must have a unique, non-null identifier.",1.0,16,0,True,
+DQ-002,skus,sku_id,unique_and_not_null,1.0,critical,Product Data Steward,"Every sellable SKU must have a unique, non-null identifier.",1.0,24,0,True,
+DQ-003,suppliers,supplier_id,unique_and_not_null,1.0,critical,Supplier Data Steward,Supplier master records must be unique and non-null.,1.0,7,0,True,
+DQ-004,skus,product_id,referential_product,1.0,critical,Product Data Steward,Every SKU must reference a product that exists in the product master.,1.0,24,0,True,"{'table': 'products', 'field': 'product_id'}"
+DQ-005,stores,warehouse_id,referential_warehouse,1.0,critical,Location Data Steward,Every store must be assigned to a warehouse that exists in the warehouse master.,1.0,8,0,True,"{'table': 'warehouses', 'field': 'warehouse_id'}"
+DQ-006,purchase_orders,sku_id,referential_sku,1.0,critical,Supply Chain Data Steward,Every purchase order must reference a SKU that exists in the SKU master.,0.9997,3809,1,False,"{'table': 'skus', 'field': 'sku_id'}"
+DQ-007,products,unit_cost,not_null,0.98,high,Finance Data Steward,Product unit cost must be populated to support margin and inventory valuation reporting.,0.875,16,2,False,
+DQ-008,daily_sales,revenue,not_null,0.98,high,Sales Data Steward,Daily sales revenue must be populated for every recorded transaction line.,0.9975,60867,152,True,
+DQ-009,daily_sales,units_sold,below_200,0.999,medium,Store Operations,Daily units sold per store-SKU should stay within a plausible single-day operating range.,0.9999,60867,6,True,
+DQ-010,inventory_snapshots,on_hand_units,non_negative,0.999,critical,Inventory Data Steward,On-hand inventory cannot be physically negative; negative values indicate a system synchronisation defect.,0.9996,20335,8,True,
+DQ-011,skus,unit_price,between_0.5_and_500,1.0,medium,Pricing Data Steward,Unit price must fall within a plausible retail price band.,1.0,24,0,True,

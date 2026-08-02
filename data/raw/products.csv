@@ -1,0 +1,17 @@
+product_id,category,subcategory,brand,unit_cost,unit_price,shelf_life_days,is_seasonal,launch_date,discontinued
+PROD-0001,Beverages,Soft Drinks,Redgum,1.61,3.3,237,False,2023-08-30,False
+PROD-0002,Snacks,Biscuits,Farmgate,2.4,3.5,230,False,2024-01-22,False
+PROD-0003,Dairy,Cheese,Farmgate,5.31,8.85,21,False,2022-11-17,False
+PROD-0004,Household,Laundry,Harvestry,,8.43,688,False,2019-12-30,False
+PROD-0005,Personal Care,Oral Care,Wattlecrest,2.26,3.39,621,False,2024-05-18,False
+PROD-0006,Frozen,Frozen Meals,Ridgeline,3.62,6.98,255,True,2021-03-17,False
+PROD-0007,Beverages,Juice,Harborside,2.68,4.53,283,True,2020-02-21,False
+PROD-0008,Snacks,Chips,Harvestry,1.5,2.36,261,False,2023-08-17,False
+PROD-0009,Dairy,Cheese,Harvestry,,6.76,17,False,2020-09-26,False
+PROD-0010,Household,Laundry,Harvestry,4.04,7.63,711,False,2020-09-01,False
+PROD-0011,Personal Care,Oral Care,Bluepeak,6.5,12.05,734,False,2019-11-04,False
+PROD-0012,Frozen,Frozen Meals,Southern Fields,3.13,5.49,254,True,2019-07-19,False
+PROD-0013,Beverages,Juice,Coastline,2.57,5.25,234,True,2020-04-17,False
+PROD-0014,Snacks,Chips,Harvestry,4.18,7.34,251,False,2022-01-16,False
+PROD-0015,Dairy,Yoghurt,Redgum,1.99,2.79,22,False,2023-11-26,False
+PROD-0016,Household,Laundry,Redgum,2.21,3.78,762,False,2024-08-25,False

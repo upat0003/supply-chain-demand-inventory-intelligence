@@ -1,0 +1,16 @@
+{
+  "name": "Supply Chain AI Control Centre",
+  "dataColors": ["#C1622D", "#3E6E8E", "#4C8B6E", "#D9A227", "#A23A3A", "#6E6491", "#8C4520"],
+  "background": "#F5F3EF",
+  "foreground": "#23262B",
+  "tableAccent": "#C1622D",
+  "good": "#3F7D5C",
+  "neutral": "#B3791D",
+  "bad": "#A23A3A",
+  "textClasses": {
+    "title": {"fontFace": "Segoe UI Semibold", "fontSize": 14, "color": "#23262B"},
+    "header": {"fontFace": "Segoe UI Semibold", "fontSize": 12, "color": "#2E3238"},
+    "label": {"fontFace": "Segoe UI", "fontSize": 10, "color": "#6E7178"},
+    "callout": {"fontFace": "Segoe UI Semibold", "fontSize": 28, "color": "#23262B"}
+  }
+}

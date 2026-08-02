@@ -1,0 +1,101 @@
+# Data quality control library
+#
+# Executed by supply_chain.governance.run_data_quality_checks against the
+# bronze extracts on every pipeline run. Results are written to
+# powerbi/data/data_quality_results.csv and drive the Data Quality and Model
+# Monitoring dashboard page. Severity determines escalation path: critical
+# rule failures block gold-layer publication and open a governance incident
+# (see governance/risk_register.md); high/medium failures are logged and
+# reviewed at the weekly data quality huddle.
+rules:
+  - id: DQ-001
+    table: products
+    field: product_id
+    expectation: unique_and_not_null
+    threshold: 1.00
+    severity: critical
+    owner: Product Data Steward
+    description: Every product master record must have a unique, non-null identifier.
+  - id: DQ-002
+    table: skus
+    field: sku_id
+    expectation: unique_and_not_null
+    threshold: 1.00
+    severity: critical
+    owner: Product Data Steward
+    description: Every sellable SKU must have a unique, non-null identifier.
+  - id: DQ-003
+    table: suppliers
+    field: supplier_id
+    expectation: unique_and_not_null
+    threshold: 1.00
+    severity: critical
+    owner: Supplier Data Steward
+    description: Supplier master records must be unique and non-null.
+  - id: DQ-004
+    table: skus
+    field: product_id
+    expectation: referential_product
+    reference: {table: products, field: product_id}
+    threshold: 1.00
+    severity: critical
+    owner: Product Data Steward
+    description: Every SKU must reference a product that exists in the product master.
+  - id: DQ-005
+    table: stores
+    field: warehouse_id
+    expectation: referential_warehouse
+    reference: {table: warehouses, field: warehouse_id}
+    threshold: 1.00
+    severity: critical
+    owner: Location Data Steward
+    description: Every store must be assigned to a warehouse that exists in the warehouse master.
+  - id: DQ-006
+    table: purchase_orders
+    field: sku_id
+    expectation: referential_sku
+    reference: {table: skus, field: sku_id}
+    threshold: 1.00
+    severity: critical
+    owner: Supply Chain Data Steward
+    description: Every purchase order must reference a SKU that exists in the SKU master.
+  - id: DQ-007
+    table: products
+    field: unit_cost
+    expectation: not_null
+    threshold: 0.98
+    severity: high
+    owner: Finance Data Steward
+    description: Product unit cost must be populated to support margin and inventory valuation reporting.
+  - id: DQ-008
+    table: daily_sales
+    field: revenue
+    expectation: not_null
+    threshold: 0.98
+    severity: high
+    owner: Sales Data Steward
+    description: Daily sales revenue must be populated for every recorded transaction line.
+  - id: DQ-009
+    table: daily_sales
+    field: units_sold
+    expectation: below_200
+    threshold: 0.999
+    severity: medium
+    owner: Store Operations
+    description: Daily units sold per store-SKU should stay within a plausible single-day operating range.
+  - id: DQ-010
+    table: inventory_snapshots
+    field: on_hand_units
+    expectation: non_negative
+    threshold: 0.999
+    severity: critical
+    owner: Inventory Data Steward
+    description: On-hand inventory cannot be physically negative; negative values indicate a system synchronisation defect.
+  - id: DQ-011
+    table: skus
+    field: unit_price
+    expectation: between_0.5_and_500
+    threshold: 1.00
+    severity: medium
+    owner: Pricing Data Steward
+    description: Unit price must fall within a plausible retail price band.

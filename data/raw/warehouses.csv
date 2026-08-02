@@ -1,0 +1,5 @@
+warehouse_id,region,warehouse_type,capacity_units
+WH-VIC,VIC,National DC,60000
+WH-NSW,NSW,Regional DC,32000
+WH-QLD,QLD,Regional DC,32000
+WH-WA,WA,Regional DC,32000

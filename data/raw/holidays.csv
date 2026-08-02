@@ -1,0 +1,34 @@
+date,holiday_name,region,impact_level
+2025-11-04,Melbourne Cup Day,VIC,Medium
+2025-12-25,Christmas Day,VIC,High
+2025-12-25,Christmas Day,NSW,High
+2025-12-25,Christmas Day,QLD,High
+2025-12-25,Christmas Day,WA,High
+2025-12-26,Boxing Day,VIC,High
+2025-12-26,Boxing Day,NSW,High
+2025-12-26,Boxing Day,QLD,High
+2025-12-26,Boxing Day,WA,High
+2026-01-01,New Year's Day,VIC,Medium
+2026-01-01,New Year's Day,NSW,Medium
+2026-01-01,New Year's Day,QLD,Medium
+2026-01-01,New Year's Day,WA,Medium
+2026-01-26,Australia Day,VIC,Medium
+2026-01-26,Australia Day,NSW,Medium
+2026-01-26,Australia Day,QLD,Medium
+2026-01-26,Australia Day,WA,Medium
+2026-04-03,Good Friday,VIC,High
+2026-04-03,Good Friday,NSW,High
+2026-04-03,Good Friday,QLD,High
+2026-04-03,Good Friday,WA,High
+2026-04-06,Easter Monday,VIC,Medium
+2026-04-06,Easter Monday,NSW,Medium
+2026-04-06,Easter Monday,QLD,Medium
+2026-04-06,Easter Monday,WA,Medium
+2026-04-25,ANZAC Day,VIC,Low
+2026-04-25,ANZAC Day,NSW,Low
+2026-04-25,ANZAC Day,QLD,Low
+2026-04-25,ANZAC Day,WA,Low
+2026-06-08,King's Birthday,VIC,Low
+2026-06-08,King's Birthday,NSW,Low
+2026-06-08,King's Birthday,QLD,Low
+2026-06-08,King's Birthday,WA,Low

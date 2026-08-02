@@ -1,0 +1,8 @@
+supplier_id,supplier_name,region_of_origin,reliability_score,purchase_orders,late_rate_pct,avg_actual_lead_time_days,avg_fill_rate_pct,delivery_status
+SUP-01,Ausfresh Distribution,VIC,0.807,257,31.5,4.1,99.7,Critical
+SUP-05,Everclear Beverage Co,Overseas,0.813,834,29.5,9.0,99.7,Watch
+SUP-04,National Household Imports,NSW,0.757,331,29.3,17.6,99.5,Watch
+SUP-07,Metro Consumer Goods,WA,0.797,624,27.7,9.9,99.6,Watch
+SUP-03,Bluewater Logistics,WA,0.921,113,18.6,18.6,99.6,Healthy
+SUP-06,Southern Cold Chain,Overseas,0.853,702,16.5,4.0,99.8,Healthy
+SUP-02,Pacific Grocers Supply,VIC,0.887,947,14.5,11.8,99.6,Healthy

@@ -1,0 +1,6 @@
+scenario_id,scenario_name,run_by,run_at,demand_shock_pct,lead_time_shock_pct,assumptions_summary,status
+SCN-0001,Baseline,supply_chain.inventory.run_scenarios,2026-07-15T09:00:00Z,0.00,0.00,No shock applied; current observed demand and lead-time variability,Reference
+SCN-0002,Promotional demand surge (+35%),supply_chain.inventory.run_scenarios,2026-07-15T09:00:00Z,0.35,0.00,Peak promotional week demand uplift applied uniformly across monitored SKUs,Advisory
+SCN-0003,Supplier disruption (+50% lead time),supply_chain.inventory.run_scenarios,2026-07-15T09:00:00Z,0.00,0.50,Simulated regional supplier disruption lengthening lead time by half,Advisory
+SCN-0004,Combined peak-season stress,supply_chain.inventory.run_scenarios,2026-07-15T09:00:00Z,0.25,0.30,Combined demand and lead-time stress representing a peak trading period,Advisory
+SCN-0005,Demand slowdown (-20%),supply_chain.inventory.run_scenarios,2026-07-15T09:00:00Z,-0.20,0.00,Post-peak demand normalisation scenario for de-stocking planning,Advisory

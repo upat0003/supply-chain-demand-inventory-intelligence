@@ -1,0 +1,24 @@
+version: 2
+sources:
+  - name: raw
+    schema: bronze
+    tables:
+      - name: daily_sales
+      - name: inventory_snapshots
+      - name: skus
+      - name: stores
+models:
+  - name: stg_daily_sales
+    columns:
+      - name: store_id
+        tests: [not_null]
+      - name: sku_id
+        tests: [not_null]
+      - name: units_sold
+        tests: [not_null]
+  - name: stg_inventory_snapshots
+    columns:
+      - name: location_id
+        tests: [not_null]
+      - name: sku_id
+        tests: [not_null]

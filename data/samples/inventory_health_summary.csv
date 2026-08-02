@@ -1,0 +1,7 @@
+category,avg_days_of_supply,excess_stock_pct,stockout_days_last_30,lost_sales_units_last_30
+Beverages,5.4,33.3,0,0.0
+Snacks,4.7,18.1,0,0.0
+Personal Care,4.4,16.3,8,25.0
+Household,4.3,14.3,0,0.0
+Frozen,4.0,10.0,5,22.0
+Dairy,4.0,9.1,0,0.0

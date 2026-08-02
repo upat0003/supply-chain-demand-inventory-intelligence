@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.duckdb
+data/processed/*
+!data/processed/.gitkeep
+artifacts/models/*.joblib
+.pytest_cache/
+.ruff_cache/
+.coverage
+.env
+logs/
+powerbi/Templates/__pycache__/

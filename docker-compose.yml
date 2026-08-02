@@ -1,0 +1,9 @@
+services:
+  pipeline:
+    image: python:3.11-slim
+    working_dir: /app
+    volumes: [".:/app"]
+    command: sh -c "pip install -r requirements.txt && python -m supply_chain.pipeline --scale dev"
+    environment:
+      PROJECT_ENV: local
+      RANDOM_SEED: "42"
